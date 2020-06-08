@@ -67,14 +67,14 @@ export default class MovingBridge extends Entity {
         new utils.MoveTransformComponent(
           this.endingPos.position,
           this.startingPos.position,
-          5
+          3
         )
       )
       this.addComponentOrReplace(
         new utils.RotateTransformComponent(
           this.endingPos.rotation,
           this.startingPos.rotation,
-          5
+          3
         )
       )
     }

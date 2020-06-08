@@ -3,7 +3,7 @@ import * as ERC20 from '../node_modules/decentraland-crypto-utils/erc20/index'
 export const screenSpaceUI = new UICanvas()
 screenSpaceUI.visible = true
 
-const imageTexture = new Texture('images/donations_UI.png')
+const imageTexture = new Texture('images/Pay_UI.png')
 const scale = 0.55
 
 let paid_lever_Model = new GLTFShape('models/PaidLever/Lever_Stick.glb')
@@ -58,6 +58,7 @@ export class PaidLever extends Entity {
     this.actionOff = actionOff
     if (activated) {
       this.activated = activated
+      this.animationOff.stop()
     }
 
     stick.addComponent(
@@ -94,8 +95,8 @@ export class PaidLever extends Entity {
     currentPayment.hAlign = 'center'
     currentPayment.vAlign = 'center'
     currentPayment.positionY = 18
-    currentPayment.positionX = 37
-    currentPayment.fontSize = 32 * scale
+    currentPayment.positionX = -37 * scale
+    currentPayment.fontSize = 35 * scale
     currentPayment.vTextAlign = 'center'
     currentPayment.hTextAlign = 'center'
     currentPayment.color = Color4.FromHexString('#FF0050FF')
