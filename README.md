@@ -2,7 +2,7 @@
 
 A simple scene that uses the `decentraland-crypto-utils` library to make a MANA payment and trigger an action after the payment is done.
 
-<img src="screenshot/screenshot.png" width="500"> 
+<img src="screenshot/screenshot.png" width="350"> 
 
 This scene shows you:
 
