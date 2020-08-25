@@ -1,4 +1,4 @@
-import * as ERC20 from '../node_modules/decentraland-crypto-utils/erc20/index'
+import * as mana from '../node_modules/@dcl/crypto-utils/mana/index'
 
 export const screenSpaceUI = new UICanvas()
 screenSpaceUI.visible = true
@@ -148,7 +148,7 @@ export class PaidLever extends Entity {
 
   public payFee(): void {
     log('PAYING FEE', this.paymentAmount)
-    ERC20.sendMana(this.address, this.paymentAmount).then(() => {
+    mana.send(this.address, this.paymentAmount).then(() => {
       this.activated = !this.activated
       if (!this.activated) {
         this.animationOn.stop()
