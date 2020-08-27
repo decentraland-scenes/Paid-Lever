@@ -148,7 +148,7 @@ export class PaidLever extends Entity {
 
   public payFee(): void {
     log('PAYING FEE', this.paymentAmount)
-    mana.send(this.address, this.paymentAmount).then(() => {
+    mana.send(this.address, this.paymentAmount, true).then(() => {
       this.activated = !this.activated
       if (!this.activated) {
         this.animationOn.stop()
