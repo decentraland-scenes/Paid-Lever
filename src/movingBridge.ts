@@ -1,5 +1,4 @@
-import utils from '../node_modules/decentraland-ecs-utils/index'
-
+import * as utils from '@dcl/ecs-scene-utils'
 let bridgeSound = new AudioClip('sounds/bridgeMoving.mp3')
 
 export default class MovingBridge extends Entity {
