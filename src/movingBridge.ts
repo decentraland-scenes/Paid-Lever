@@ -1,5 +1,5 @@
 import * as utils from '@dcl/ecs-scene-utils'
-let bridgeSound = new AudioClip('sounds/bridgeMoving.mp3')
+const bridgeSound = new AudioClip('sounds/bridgeMoving.mp3')
 
 export default class MovingBridge extends Entity {
   open: boolean = false

@@ -8,7 +8,7 @@ export function buildScene() {
   const transform = new Transform({
     position: new Vector3(0, 0, 0),
     rotation: new Quaternion(0, 0, 0, 1),
-    scale: new Vector3(1, 1, 1),
+    scale: new Vector3(1, 1, 1)
   })
   _scene.addComponentOrReplace(transform)
 
@@ -25,7 +25,7 @@ export function buildScene() {
   const transform2 = new Transform({
     position: new Vector3(8, 0, 8),
     rotation: new Quaternion(0, 0, 0, 1),
-    scale: new Vector3(1, 1, 1),
+    scale: new Vector3(1, 1, 1)
   })
   entity.addComponentOrReplace(transform2)
 
@@ -39,7 +39,7 @@ export function buildScene() {
       3.7663958072662354,
       4.651392459869385,
       3.7663958072662354
-    ),
+    )
   })
   smallStoneStair.addComponentOrReplace(transform3)
   const gltfShape2 = new GLTFShape(
@@ -56,7 +56,7 @@ export function buildScene() {
   const transform4 = new Transform({
     position: new Vector3(3, 0, 3.5),
     rotation: new Quaternion(0, 0, 0, 1),
-    scale: new Vector3(1, 1.4962525367736816, 0.9856662750244141),
+    scale: new Vector3(1, 1.4962525367736816, 0.9856662750244141)
   })
   stoneTopBlock.addComponentOrReplace(transform4)
   const gltfShape3 = new GLTFShape(
@@ -74,11 +74,7 @@ export function buildScene() {
   const transform5 = new Transform({
     position: new Vector3(9, 0, 12),
     rotation: new Quaternion(0, 0, 0, 1),
-    scale: new Vector3(
-      1.245723843574524,
-      1.434235692024231,
-      0.7579238414764404
-    ),
+    scale: new Vector3(1.245723843574524, 1.434235692024231, 0.7579238414764404)
   })
   stoneTopBlock3.addComponentOrReplace(transform5)
 
@@ -89,7 +85,7 @@ export function buildScene() {
   const transform6 = new Transform({
     position: new Vector3(16, 0, 4),
     rotation: new Quaternion(0, 0, 0, 1),
-    scale: new Vector3(1, 1.4962525367736816, 0.9856662750244141),
+    scale: new Vector3(1, 1.4962525367736816, 0.9856662750244141)
   })
   stoneTopBlock2.addComponentOrReplace(transform6)
 
@@ -108,7 +104,7 @@ export function buildScene() {
       8.429369557916289e-8,
       -0.7071068286895752
     ),
-    scale: new Vector3(1.0000016689300537, 1, 1.0000016689300537),
+    scale: new Vector3(1.0000016689300537, 1, 1.0000016689300537)
   })
   dogStatue.addComponentOrReplace(transform9)
   const gltfShape5 = new GLTFShape('models/PillarDog_01/PillarDog_01.glb')
@@ -132,7 +128,7 @@ export function buildScene() {
       -8.429369557916289e-8,
       0.7071068286895752
     ),
-    scale: new Vector3(1.0000030994415283, 1, 1.0000030994415283),
+    scale: new Vector3(1.0000030994415283, 1, 1.0000030994415283)
   })
   catStatue.addComponentOrReplace(transform10)
   const gltfShape6 = new GLTFShape('models/PillarCat_01/PillarCat_01.glb')

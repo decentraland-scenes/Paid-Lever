@@ -6,10 +6,10 @@ screenSpaceUI.visible = true
 const imageTexture = new Texture('images/Pay_UI.png')
 const scale = 0.55
 
-let paid_lever_Model = new GLTFShape('models/PaidLever/Lever_Stick.glb')
-let base_Model = new GLTFShape('models/PaidLever/Base_Lever.glb')
+const paid_lever_Model = new GLTFShape('models/PaidLever/Lever_Stick.glb')
+const base_Model = new GLTFShape('models/PaidLever/Base_Lever.glb')
 
-let clickSound = new AudioClip('sounds/click.mp3')
+const clickSound = new AudioClip('sounds/click.mp3')
 
 export class PaidLever extends Entity {
   animationOn: AnimationState
@@ -36,7 +36,7 @@ export class PaidLever extends Entity {
     this.addComponent(base_Model)
     this.addComponent(new Transform(pos))
 
-    let stick = new Entity()
+    const stick = new Entity()
     stick.addComponent(paid_lever_Model)
     stick.setParent(this)
 
@@ -48,7 +48,7 @@ export class PaidLever extends Entity {
     this.addComponent(new AudioSource(clickSound))
 
     this.animationOff = new AnimationState('LeverOff_Action', {
-      looping: false,
+      looping: false
     })
     stick.getComponent(Animator).addClip(this.animationOff)
 
@@ -70,7 +70,7 @@ export class PaidLever extends Entity {
       )
     )
 
-    let background = new UIImage(screenSpaceUI, imageTexture)
+    const background = new UIImage(screenSpaceUI, imageTexture)
 
     background.name = 'background'
     background.width = 1024 * scale

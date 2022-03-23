@@ -2,7 +2,7 @@ import { PaidLever } from './paidLever'
 import { buildScene } from './builderContent'
 import MovingBridge from './movingBridge'
 
-export let sceneMessageBus = new MessageBus()
+export const sceneMessageBus = new MessageBus()
 
 buildScene()
 
@@ -14,7 +14,7 @@ const bridge = new MovingBridge(
       -0.41761070489883423,
       4.978307543979099e-8,
       -0.9086260795593262
-    ),
+    )
   },
   {
     position: new Vector3(4, 2.2, 6.5),
@@ -23,7 +23,7 @@ const bridge = new MovingBridge(
       0.8520362377166748,
       -1.0157062746429801e-7,
       0.5234828591346741
-    ),
+    )
   },
   sceneMessageBus
 )
