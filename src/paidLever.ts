@@ -48,7 +48,7 @@ export class PaidLever extends Entity {
     this.addComponent(new AudioSource(clickSound))
 
     this.animationOff = new AnimationState('LeverOff_Action', {
-      looping: false
+      looping: false,
     })
     stick.getComponent(Animator).addClip(this.animationOff)
 
@@ -148,20 +148,23 @@ export class PaidLever extends Entity {
 
   public payFee(): void {
     log('PAYING FEE', this.paymentAmount)
-    crypto.mana.send(this.address, this.paymentAmount, true).then(() => {
-      this.activated = !this.activated
-      if (!this.activated) {
-        this.animationOn.stop()
-        this.animationOff.stop()
-        this.animationOff.play()
-        this.actionOff()
-      } else {
-        this.animationOn.stop()
-        this.animationOff.stop()
-        this.animationOn.play()
-        this.actionOn()
-      }
-      this.getComponent(AudioSource).playOnce()
-    })
+    crypto.mana
+      .send(this.address, this.paymentAmount, true)
+      .then(() => {
+        this.activated = !this.activated
+        if (!this.activated) {
+          this.animationOn.stop()
+          this.animationOff.stop()
+          this.animationOff.play()
+          this.actionOff()
+        } else {
+          this.animationOn.stop()
+          this.animationOff.stop()
+          this.animationOn.play()
+          this.actionOn()
+        }
+        this.getComponent(AudioSource).playOnce()
+      })
+      .catch((error) => log(error))
   }
 }
